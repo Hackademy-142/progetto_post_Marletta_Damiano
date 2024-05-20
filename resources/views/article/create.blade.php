@@ -7,11 +7,11 @@
             <div class="container my-5">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8">
-                        @if (error->any())
+                        @if ($errors->any())
 
                         <div class="alert alert-danger">
                             <ul>
-                                @foreach ($error->all() as $error)
+                                @foreach ($errors->all() as $error)
                                         <li>{{ $error }}</li>
                                 @endforeach
                             </ul>
@@ -40,14 +40,14 @@
                                 <div class="mb-3">
                                     <label for="category" class="form-label">Categoria:</label>
                                     <select  name="image" id="category" class="form-control text-capitalize">
-                                        @foreach ($category->id as $category)
+                                        @foreach ($categories as $category)
                                             <option value="{{$category->id}}">{{$category->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="body" class="form-label">Corpo del testo:</label>
-                                    <textarea  name="body" class="form-controll" id="body" cols="30" rows="7" >{{}old('body')}</textarea>
+                                    <textarea  name="body" class="form-controll" id="body" cols="30" rows="7" >{{old('body')}}</textarea>
                                 </div>
                                 <div class="mt-2 d-flex justify-content-center">
                                     <button class="btn btn-info text-white ">Inserisci un articolo</button>
@@ -59,4 +59,4 @@
                 </div>
             </div>
     </div>
-<x/layout>
+</x-layout>

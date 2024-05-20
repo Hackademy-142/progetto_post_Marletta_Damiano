@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use id;
 use App\Models\article;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
 class ArticleController extends Controller implements HasMiddleware 
     {
@@ -34,7 +36,7 @@ class ArticleController extends Controller implements HasMiddleware
     public function byUser(User $user)
     {
         $articles = $user->articles()->orderby('created_at' , 'desc')->get();
-        return view('article.by-user' , compact('user' , 'articles'));
+        return view('article.byUser' , compact('user' , 'articles'));
     }
     /**
      * Show the form for creating a new resource.
@@ -64,7 +66,7 @@ class ArticleController extends Controller implements HasMiddleware
             'image'=>$request->file('image')->store('public/images'),
             'category_id'=> $request->category,
             'user_id' => Auth::user()->id,
-        ])
+        ]);
         
         return redirect(route('homepage'))->with('messsage' , 'Articolo creato correttamente');
 
@@ -75,7 +77,7 @@ class ArticleController extends Controller implements HasMiddleware
      */
     public function show(article $article)
     {
-        retun view('article.show', compact('article'));
+        return view('article.show', compact('article'));
     }
 
     /**
