@@ -18,7 +18,7 @@
                </div>
                @endif
 
-<form class="card p-5 shadow" action="{{ route ('login')}}" mothod="POST">
+<form class="card p-5 shadow" action="{{ route ('login')}}" method="POST">
                 @csrf
   
 
@@ -35,7 +35,7 @@
   </div>
 
   <div class="mb-3">
-   <button class="btn bg-info text-white">accedi</button>
+   <button class="btn bg-info text-white" type="submit">accedi</button>
    <p class="small mt-2">Non sei registrato? <a href="{{ route('register') }}">Clicca qui </a></p>
   </div>
 

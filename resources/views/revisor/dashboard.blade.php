@@ -15,8 +15,8 @@
         <div class="container my-5">
             <row class="justify-content-center">
                 <div class="col-12">
-                    <h2>Richiesta per ruolo amministratore</h2>
-                    <x-requests-table :roleRequests="$adminRequests" role="amministratore"/>
+                    <h2>Articoli da revisionare</h2>
+                    <x-articles-table :articles="$unrevisionedArticles"/>
                 </div>
             </row>
         </div>
@@ -24,8 +24,8 @@
         <div class="container my-5">
             <row class="justify-content-center">
                 <div class="col-12">
-                    <h2>Richiesta per ruolo revisore</h2>
-                    <x-requests-table :roleRequests="$revisorRequests" role="revisore"/>
+                    <h2>Articoli pubblicati</h2>
+                    <x-articles-table :articles="$acceptedArticles"/>
                 </div>
             </row>
         </div>
@@ -33,8 +33,8 @@
         <div class="container my-5">
             <row class="justify-content-center">
                 <div class="col-12">
-                    <h2>Richiesta per ruolo redattore</h2>
-                    <x-requests-table :roleRequests="$writerRequests" role="redattore"/>
+                    <h2>Articoli respinti</h2>
+                    <x-articles-table :articles="$rejectedArticles"/>
                 </div>
             </row>
         </div>

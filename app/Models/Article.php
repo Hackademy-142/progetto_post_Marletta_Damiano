@@ -16,7 +16,8 @@ class Article extends Model
         'body',
         'image',
         'user_id',
-        'cateory_id'
+        'cateory_id',
+        'is_accepted',
     ];
 
     public function user(){
