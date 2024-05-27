@@ -32,7 +32,13 @@
                                 </div>
                                 
                                 <div class="mb-3">
-                                    <label for="image" class="form-label">immagine:</label>
+                                    <label for="image" class="form-label">Tags</label>
+                                    <input  name="tags" class="form-controll" id="tags" value="{{ old('tags') }}" >
+                                    <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="tags" class="form-label">immagine:</label>
                                     <input type="file" name="image" class="form-controll" id="image" >
                                 </div>
 

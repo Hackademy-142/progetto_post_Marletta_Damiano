@@ -64,6 +64,7 @@ class ArticleController extends Controller implements HasMiddleware
             'body'=> 'required|min:10',
             'image'=>'image|required',
             'category'=>'required',
+            'tags' => 'required',
         ]);
 
         $article = Article::create([
@@ -75,6 +76,22 @@ class ArticleController extends Controller implements HasMiddleware
             'user_id' => Auth::user()->id,
         ]);
         
+        $tags = exsplode(',' , $request->tags);
+
+        foreach ($tags as $i => $tag) {
+            $tags[$i] = trim($tag);
+        }
+
+        foreach ($tags as $tag){
+            $newTag = Tag::updateOrCreate([
+                'name' => strtoloewr($tag)
+            ]);
+            $article->tags()->attach($newTag);
+                
+               
+            
+        }
+
         return redirect(route('homepage'))->with('messsage' , 'Articolo creato correttamente');
 
     }
