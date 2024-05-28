@@ -12,6 +12,15 @@
         </div>
        
    @endif
+     @if ($errors->any(()))
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+     @endif
+        </div>
         <div class="container my-5">
             <row class="justify-content-center">
                 <div class="col-12">
@@ -35,6 +44,15 @@
                 <div class="col-12">
                     <h2>Richiesta per ruolo redattore</h2>
                     <x-requests-table :roleRequests="$writerRequests" role="redattore"/>
+                </div>
+            </row>
+        </div>
+
+        <div class="container my-5">
+            <row class="justify-content-center">
+                <div class="col-12">
+                    <h2>I tag della piattaforma</h2>
+                    <x-metainfo-table :metaInfos="$tags" metaType="tags"/>
                 </div>
             </row>
         </div>
