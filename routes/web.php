@@ -28,7 +28,7 @@ Route::middleware('admin')->group(function(){
     Route::put('/admin/edit/{category}/category' , [AdminController::class , 'editCategory'])->name('admin.editCategory');
     Route::delete('/admin/delete/{category}/category' , [AdminController::class , 'deleteCategory'])->name('admin.editCategory');
     Route::post('/admin/category/store' , [AdminController::class , 'storeCategory'])->name('admin.storeCategory');
-    Route::get('/writer/dashboard' , [WriterController::class , 'dashboard'])->name('writer.dashboard');
+    
 });
 
 
@@ -44,5 +44,8 @@ Route::middleware('writer')->group(function(){
     
 Route::get('/articles/create' , [ArticleController::class , 'create'])->name('article.create');
 Route::post('/article/store' , [ArticleController::class , 'store'])->name('article.store');
-    
+Route::get('/writer/dashboard' , [WriterController::class , 'dashboard'])->name('writer.dashboard');
+Route::get('/article/{article}/edit' , [ArticleController::class , 'edit'])->name('article.edit');
+Route::put('/article/{article}/update' , [ArticleController::class , 'update'])->name('article.update');
+Route::delete('/article/{article}/destroy' , [ArticleController::class , 'destroy'])->name('article.destroy');
 });
