@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use id;
 use App\Models\article;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
@@ -74,6 +75,7 @@ class ArticleController extends Controller implements HasMiddleware
             'image'=>$request->file('image')->store('public/images'),
             'category_id'=> $request->category,
             'user_id' => Auth::user()->id,
+            'slug' => Str::slug($request->title),
         ]);
         
         $tags = exsplode(',' , $request->tags);
@@ -132,7 +134,7 @@ class ArticleController extends Controller implements HasMiddleware
             'body'=> $request->body,
             
             'category_id'=> $request->category,
-            
+            'slug' => Str::slug($request->title),           
         ]);
 
         if ($request->image) {

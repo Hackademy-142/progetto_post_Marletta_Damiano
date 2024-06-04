@@ -12,6 +12,8 @@
 
             </p>
         @endif
+        <span class="text-muted small fst-italic">tempo di lettura {{ $readDuration }} min</span>
+
           <p class="small fst-italic text-capitalize">
             @foreach ($tags as $tag)
                 #{{ $tag->name }}

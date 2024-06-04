@@ -20,7 +20,19 @@ class Article extends Model
         'user_id',
         'cateory_id',
         'is_accepted',
+        'slug'
     ];
+
+    public function getRoutekeyName(){
+        return 'slug';
+    }
+
+    public function readDuration(){
+        $totalWords = str_word_count($this->body);
+        $minutesToRead = round($totalWords / 200);
+
+        return intval($minutesToRead);
+    }
 
     public function toSearchableArray(){
         return [
@@ -29,6 +41,7 @@ class Article extends Model
             'subtitle' => $this->subtitle,
             'body' => $this->body,
             'category' => $this->category,
+
         ];
     }
 

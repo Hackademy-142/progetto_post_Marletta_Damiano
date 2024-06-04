@@ -24,6 +24,7 @@
                     user="{{ $article->user->name }}"
                     url="{{ route('article.show' , compact('article')) }}"
                     urlCategory="{{route('article.byCategory' , ['category' => $article->category->id] )}}"
+                    readDuration="{{ $article->readDuration() }}"
                 />
             </div>
             @endforeach
