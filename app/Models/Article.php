@@ -37,7 +37,7 @@ class Article extends Model
     public function toSearchableArray(){
         return [
             'id' => $this->id,
-            'title' => $this-title,
+            'title' => $this->title,
             'subtitle' => $this->subtitle,
             'body' => $this->body,
             'category' => $this->category,

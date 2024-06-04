@@ -6,6 +6,7 @@ use id;
 use App\Models\article;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
 
@@ -60,7 +61,7 @@ class ArticleController extends Controller implements HasMiddleware
     public function store(Request $request)
     {
         $request->validate([
-            'title'=>'required|unique:article|min:5',
+            'title'=>'required|unique:articles|min:5',
             'subtitle'=> 'required|min:5',
             'body'=> 'required|min:10',
             'image'=>'image|required',
@@ -78,7 +79,7 @@ class ArticleController extends Controller implements HasMiddleware
             'slug' => Str::slug($request->title),
         ]);
         
-        $tags = exsplode(',' , $request->tags);
+        $tags = explode(',' , $request->tags);
 
         foreach ($tags as $i => $tag) {
             $tags[$i] = trim($tag);

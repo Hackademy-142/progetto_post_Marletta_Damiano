@@ -45,7 +45,7 @@
                                 
                                 <div class="mb-3">
                                     <label for="category" class="form-label">Categoria:</label>
-                                    <select  name="image" id="category" class="form-control text-capitalize">
+                                    <select  name="category" id="category" class="form-control text-capitalize">
                                         @foreach ($categories as $category)
                                             <option value="{{$category->id}}">{{$category->name}}</option>
                                         @endforeach
