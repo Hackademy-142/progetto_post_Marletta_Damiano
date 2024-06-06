@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use id;
+use App\Models\Tag;
+use App\Models\User;
 use App\Models\article;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Routing\Controllers\HasMiddleware;
 
@@ -87,7 +91,7 @@ class ArticleController extends Controller implements HasMiddleware
 
         foreach ($tags as $tag){
             $newTag = Tag::updateOrCreate([
-                'name' => strtoloewr($tag)
+                'name' => strtolower($tag)
             ]);
             $article->tags()->attach($newTag);
                 
@@ -145,7 +149,7 @@ class ArticleController extends Controller implements HasMiddleware
             ]);
         }
         
-        $tags = exsplode(',' , $request->tags);
+        $tags = explode(',' , $request->tags);
 
         foreach ($tags as $i => $tag) {
             $tags[$i] = trim($tag);
@@ -155,7 +159,7 @@ class ArticleController extends Controller implements HasMiddleware
 
         foreach ($tags as $tag){
             $newTag = Tag::updateOrCreate([
-                'name' => strtoloewr($tag)
+                'name' => strtolower($tag)
             ]);
             $newTags[] = $newTag->id;
                 
@@ -173,7 +177,7 @@ class ArticleController extends Controller implements HasMiddleware
     public function destroy(article $article)
     {
         foreach ($article->tags as $tag) {
-            $article->$tags()->detach($tag);
+            $article->$tag()->detach($tag);
         }
 
          $article->delete();

@@ -19,23 +19,29 @@
                 </div>
                 <hr>
                 <p>{{ $article->body }}</p>
+                    @if(Auth::user() && Auth::user()->is_revisor)
                 <div class="text-center">
                     <a href="{{ route('article.index') }}" class="btn btn-info text-white my-5">Torna indietro</a>
                 </div>
 
                 <div class="d-flex justify-content-between">
-                    @if (Auth::user() && Auth::user()->is_revisor)
+                    
+              
                     <form action="{{ route('revisor.acceptArticle' , compact('article')) }}" method="POST">
                         @csrf
                     </form>
                     <button class="btn btn-success text-white">Accetta articolo</button>
                     <form action="{{ route('revisor.rejectArticle' , compact('article')) }}" method="POST">
                         @csrf
-                    </form>
-                    <button class="btn btn-danger text-white">Rifiuta articolo</button>
-                    @endif
-                </div>
 
+                        <button class="btn btn-danger text-white">Rifiuta articolo</button>
+                    </form>
+                    
+                    @endif
+               
+                 
+                </div>
+                
             </div>
       
         </div>
