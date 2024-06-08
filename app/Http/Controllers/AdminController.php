@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -49,7 +51,7 @@ class AdminController extends Controller
     }
 
     public function deleteTag(Tag $tag){
-        foreach ($tag->articles as $articles) {
+        foreach ($tag->articles as $article) {
             $article->tags()->detach($tag);
         }
 
@@ -63,7 +65,7 @@ class AdminController extends Controller
             'name' => 'required|unique:categories'
         ]);
 
-        $tag->update([
+        $category->update([
             'name' => strtolower($request->name),
         ]);
 

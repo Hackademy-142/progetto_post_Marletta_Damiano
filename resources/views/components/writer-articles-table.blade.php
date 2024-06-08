@@ -20,14 +20,14 @@
                 <td>{{ $article->title }}</td>
                 <td>{{ $article->subtitle }}</td>
                 <td>{{ $article->category->name ?? 'Non categorizzato' }}</td>
-                <td>
-                    @foreach ($article->tags as $tag)
+                  <td>
+                    {{-- @foreach ($article->tags as $tag)
                             {{ $tag->name }}
-                    @endforeach
-                </td>
-                <td>{{ $article->created_At->format('d/m/Y') }}</td>
+                    @endforeach --}}
+                </td>  
+                 {{-- <td>{{ $article->created_At->format('d/m/Y') }}</td>  --}}
                 <td>
-                    <a href="{{ route('article.show' , compact('article')) }}" class="btn btn-info text-white">Leggi l'articolo</a>
+                     {{-- <a href="{{ route('article.show' , compact('article')) }}" class="btn btn-info text-white">Leggi l'articolo</a>  --}}
                     <a href="{{ route('article.edit' , compact('article')) }}"  class="btn btn-warning text-white">Modifica l'articolo</a>
                     <form action="{{ route('article.destroy' , compact('article')) }}" method="POST" class="d-inline">
                         @csrf
