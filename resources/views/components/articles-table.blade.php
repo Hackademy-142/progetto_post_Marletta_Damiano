@@ -21,9 +21,10 @@
                         <a href="{{ route('article.show' , compact('article')) }}" class="btn btn-info text-white">Leggi l'articolo</a>
                     @else
                         <form action="{{ route('revisor.undoArticle' , compact('article')) }}" method="POST">
-                            @csrf
+                            @csrf  
+                             <button class="btn btn-info text-white">Riporta in revisione</button>
                         </form>
-                        <button class="btn btn-info text-white">Riporta in revisione</button>
+                     
                     @endif
                 </td>
             </tr>

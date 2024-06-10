@@ -27,17 +27,19 @@
                 <div class="d-flex justify-content-between">
                     
               
-                    <form action="{{ route('revisor.acceptArticle' , compact('article')) }}" method="POST">
+                    <form action="{{ route('revisor.acceptedArticle' , compact('article')) }}" method="POST">
+                       
                         @csrf
+                        <button class="btn btn-success text-white">Accetta articolo</button>
                     </form>
-                    <button class="btn btn-success text-white">Accetta articolo</button>
+                    
                     <form action="{{ route('revisor.rejectArticle' , compact('article')) }}" method="POST">
                         @csrf
 
                         <button class="btn btn-danger text-white">Rifiuta articolo</button>
                     </form>
                     
-                    @endif
+                 @endif
                
                  
                 </div>
@@ -46,3 +48,4 @@
       
         </div>
     </div>
+</x-layout>

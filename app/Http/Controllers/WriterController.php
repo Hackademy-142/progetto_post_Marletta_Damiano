@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class WriterController extends Controller
 {
     public function dashboard(){
-        $articles = Auth::user()->orderBy('created_at' , 'desc')->get();
+        $articles = (new Article)->orderBy('created_at' , 'desc')->get();
         
         $unrevisionedArticles = $articles->where('is_accepted' , '===' , NULL);
         $acceptedArticles =$articles->where('is_accepted' , true);

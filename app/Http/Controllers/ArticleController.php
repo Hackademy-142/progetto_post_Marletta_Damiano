@@ -177,12 +177,12 @@ class ArticleController extends Controller implements HasMiddleware
     public function destroy(article $article)
     {
         foreach ($article->tags as $tag) {
-            $article->$tag()->detach($tag);
+            $article->tags()->detach($tag);
         }
 
          $article->delete();
    
-         return redirect(route('writer.dasboard'))->with('messsage' , 'Articolo cancellato correttamente');
+         return redirect(route('writer.dashboard'))->with('messsage' , 'Articolo cancellato correttamente');
     }
 
 

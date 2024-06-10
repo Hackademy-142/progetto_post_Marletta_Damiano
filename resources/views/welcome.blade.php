@@ -19,11 +19,11 @@
                     title="{{ $article->title}}" 
                     subtitle="{{ $article->subtitle }}"
                     image="{{ $article->image }}"
-                    category="{{ $article->category->name }}"
+                    category="{{ $article->category->name ??'None' }}"
                     data="{{ $article->created_at->format('d/m/y') }}"
-                    user="{{ $article->user->name }}"
+                    user="{{ $article->user->name ??'None' }}"
                     url="{{ route('article.show' , compact('article')) }}"
-                    urlCategory="{{route('article.byCategory' , ['category' => $article->category->id] )}}"
+                    urlCategory="{{route('article.byCategory' , ['category' => $article->category->id ??'None'] )}}"
                     readDuration="{{ $article->readDuration() }}"
                 />
             </div>

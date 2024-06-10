@@ -7,7 +7,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('article.create')}}">Inserisci un articolo</a>
+          <a class="nav-link active" aria-current="page" href="{{route('article.create')}}">
+            Inserisci un articolo 
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Tutti gi articoli</a>
@@ -16,20 +18,20 @@
         @auth
         @if (Auth::user()->is_admin)
          <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard Admin</a>
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">Admin</a>
          </li>
             
         @endif
         @if (Auth::user()->is_revisor)
         <li class="nav-item">
-           <a class="nav-link" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a>
+           <a class="nav-link" href="{{ route('revisor.dashboard') }}">Revisore</a>
         </li>
            
        @endif
 
        @if (Auth::user()->is_writer)
        <li class="nav-item">
-          <a class="nav-link" href="{{ route('writer.dashboard') }}">Dashboard del redattore</a>
+          <a class="nav-link" href="{{ route('writer.dashboard') }}">Redattore</a>
        </li>
           
       @endif
