@@ -25,7 +25,7 @@
                             {{ $tag->name }}
                     @endforeach
                 </td>  
-                 {{-- <td>{{ date_format($article->created_At,"m/d/Y ") }}</td> --}}
+                  <td>{{ date_format($article->created_at,"m/d/Y ") }}</td> 
                 <td>
                      <a href="{{ route('article.show' , compact('article')) }}" class="btn btn-info text-white">Leggi l'articolo</a> 
                     <a href="{{ route('article.edit' , compact('article')) }}"  class="btn btn-warning text-white">Modifica l'articolo</a>

@@ -125,7 +125,7 @@ class ArticleController extends Controller implements HasMiddleware
     public function update(Request $request, article $article)
     {
         $request->validate([
-            'title'=>'required|min:5|unique:article,title,'.$article->id ,
+            'title'=>'required|min:5|unique:articles,title,'.$article->id ,
             'subtitle'=> 'required|min:5',
             'body'=> 'required|min:10',
             'image'=>'image',
@@ -168,7 +168,7 @@ class ArticleController extends Controller implements HasMiddleware
         }
          $article->tags()->sync($newTag);
 
-        return redirect(route('writer.dasboard'))->with('messsage' , 'Articolo aggiornato correttamente');
+        return redirect(route('writer.dashboard'))->with('messsage' , 'Articolo aggiornato correttamente');
     }
 
     /**

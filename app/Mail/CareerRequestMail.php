@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Console\View\Components\Info;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
@@ -17,7 +18,7 @@ class CareerRequestMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($info)
     {
         $this->info = $info;
     }

@@ -89,4 +89,9 @@ class AdminController extends Controller
         return redirect(route('admin.dashboard'))->with('message' , 'Categoria inserita correttamente ');
     }
 
+    // public function deleteRequest(Request $request){
+        
+
+    // }
+
 }

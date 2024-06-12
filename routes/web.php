@@ -29,7 +29,8 @@ Route::middleware('admin')->group(function(){
     Route::put('/admin/edit/{category}/category' , [AdminController::class , 'editCategory'])->name('admin.editCategory');
     Route::delete('/admin/delete/{category}/category' , [AdminController::class , 'deleteCategory'])->name('admin.editCategory');
     Route::post('/admin/category/store' , [AdminController::class , 'storeCategory'])->name('admin.storeCategory');
-    
+    // delete request
+    // Route::delete('/admin/delete/{request}/request' , [AdminController::class , 'deleteRequest'])->name('admin.deleteRequest');
 });
 
 

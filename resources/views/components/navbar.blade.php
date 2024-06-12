@@ -44,7 +44,7 @@
                 <form action="{{ route( 'logout' ) }}" id="logout-form" method="POST">
                 @csrf 
                 <button type="submit" class="btn nav-link">Logout</button>   
-                <form>
+                </form>
             </li>
            
             </ul>
@@ -66,6 +66,9 @@
         </li>
                
       </ul>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{{route('careers')}}">Lavora con noi</a>
+      </li>
       <form class="d-flex" method="GET" action="{{ route('article.search') }}">
         <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
         <button class="btn btn-outline-info" type="submit">Cerca</button>

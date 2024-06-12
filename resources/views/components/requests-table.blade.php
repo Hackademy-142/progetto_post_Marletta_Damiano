@@ -21,6 +21,11 @@
                             @method('patch')
                             <button type="submit" class="btn btn-info text-white">Attiva {{ $role }}</button>
                             </form>
+                            {{-- <form action="{{ route('admin.deleteAdmin' , compact('user')) }}" method="POST">
+                                @csrf
+                                @method('patch')
+                                <button type="submit" class="btn btn-danger text-white">elimina {{ $role }}</button>
+                                </form> --}}
                             @break
                         @case('revisore')
                         <form action="{{ route('admin.setRevisor' , compact('user')) }}" method="POST">
@@ -30,7 +35,7 @@
                             </form>
                             @break
 
-                            @case('revisore')
+                            @case('redattore')
                             <form action="{{ route('admin.setWriter' , compact('user')) }}" method="POST">
                                 @csrf
                                 @method('patch')

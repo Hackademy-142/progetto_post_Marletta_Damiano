@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Mail\CareerRequestMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -46,13 +48,13 @@ class PublicController extends Controller
                 $user->is_revisor = Null;
                 break;
 
-                case 'writer':
-                    $user->is_writer = Null;
-                    break;
+            case 'writer':
+                $user->is_writer = Null;
+                break;
 
         }
-
-        $user->update();
+        // $user = ( new User)->update();
+          $user->update();
 
         return redirect(route('homepage'))->with('message' , 'grazie per averci contattato!');
     }

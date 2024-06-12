@@ -52,6 +52,12 @@
                         <input type="email" name="email" class="form-control" id="email" value="{{ old('email') ??
                         Auth::user()->email }}">
                     </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Parlaci di te</label>
+                        <textarea name="message" id="message" cols="30" rows="7" class="form-control">
+                            {{ old('message') }}
+                        </textarea>
+                    </div>
                     <div class="mt-2">
                         <button class="btn btn-info text-white">Invia la tua canditatura</button>
                     </div>
