@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-" style="background-color: rgb(83, 83, 236) ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">AulabPost</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,11 +8,11 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route('article.create')}}">
-            Inserisci un articolo 
+            Inserisci un articolo <i class="fa fa-pencil" aria-hidden="true"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Tutti gi articoli</a>
+          <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Tutti gi articoli </i><i class="fa fa-list-alt" aria-hidden="true"></i></a>
         </li>
         
         @auth
@@ -68,10 +68,10 @@
       </ul>
       
       <div class="nav-item " style="margin-right: 1rem">
-        <a class="nav-link active" aria-current="page" href="{{route('careers')}}">Lavora con noi</a>
+        <a class="nav-link active" aria-current="page" href="{{route('careers')}}">Lavora con noi <i class="fa-solid fa-briefcase"></i></a>
       </div>
       <form class="d-flex" method="GET" action="{{ route('article.search') }}">
-        <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
+        <input class="form-control me-2" style="color: black !important" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
         <button class="btn btn-outline-info" type="submit">Cerca</button>
       </form>
     </div>

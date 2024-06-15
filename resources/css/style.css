@@ -10,3 +10,8 @@
 html{
   height: -webkit-fill-available;
 }
+
+
+nav *{
+  color:white !important
+}
