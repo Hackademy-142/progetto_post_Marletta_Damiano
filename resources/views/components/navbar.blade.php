@@ -43,7 +43,7 @@
             <li class="nav-item">
                 <form action="{{ route( 'logout' ) }}" id="logout-form" method="POST">
                 @csrf 
-                <button type="submit" class="btn nav-link">Logout</button>   
+                <button type="submit" style="color: black !important" class="btn nav-link">Logout</button>   
                 </form>
             </li>
            
@@ -55,10 +55,10 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Benvenuto Ospite
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" style="color: black !important">
             
-               <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
-               <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+               <li><a class="dropdown-item" style="color: black !important" href="{{ route('register') }}">Registrati</a></li>
+               <li><a class="dropdown-item" style="color: black !important" href="{{ route('login') }}">Accedi</a></li>
             </ul>
         <li>
         @endguest

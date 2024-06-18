@@ -35,7 +35,7 @@
                                 <div class="row mb-2">
                                     <div class="mb-3 col-6">
                                         <label for="image" class="form-label">Tags</label>
-                                        <input style=" box-shadow: 0px 2px 5px -1px" name="tags" class="form-control" id="tags" value="{{ old('tags') }}" >
+                                        <input  name="tags" class="form-control" id="tags" value="{{ old('tags') }}" >
                                         <span class="small fst-italic">Dividi ogni tag con una virgola</span>
                                     </div>
 
