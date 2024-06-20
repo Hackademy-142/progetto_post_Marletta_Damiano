@@ -13,7 +13,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             @if($articles->isNotEmpty() )
-            @if($articles[0]->url != NULL)
+            
             
             @foreach ($articles as $article)
             <div class="col-12 col-md-3 ">
@@ -29,7 +29,7 @@
                 />
             </div>
             @endforeach
-            @endif
+            
             @else 
             <h2 style="text-align: center;">Nessun articolo trovato</h2>
             @endif

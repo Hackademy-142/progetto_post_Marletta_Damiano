@@ -11,17 +11,11 @@
 
             <div class="col-12 col-md-6">
                 <h2>Lavora come amministratore</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quod deserunt repellendus beatae, at unde voluptate quaerat accusamus aliquam minima! Odio eaque fugiat natus est voluptatibus dolorem atque maiores odit.
-                Possimus atque corporis accusamus nesciunt facere reiciendis dolore, repudiandae quae unde corrupti aperiam obcaecati aliquam ducimus illum voluptate harum voluptates dicta eos voluptas nisi! Praesentium ullam officia quis dolores laudantium!
-                Officia obcaecati amet explicabo nostrum expedita quam sequi. Facilis ipsa voluptates expedita culpa, explicabo possimus nulla doloribus nobis beatae est magni voluptatibus quo quos eligendi? Adipisci deleniti suscipit reiciendis eius?</p>
+                <p>Aiutaci a gestire il sito entrando a far parte del nostro team come amministratore</p>
                 <h2>Lavora come revisore</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quod deserunt repellendus beatae, at unde voluptate quaerat accusamus aliquam minima! Odio eaque fugiat natus est voluptatibus dolorem atque maiores odit.
-                Possimus atque corporis accusamus nesciunt facere reiciendis dolore, repudiandae quae unde corrupti aperiam obcaecati aliquam ducimus illum voluptate harum voluptates dicta eos voluptas nisi! Praesentium ullam officia quis dolores laudantium!
-                Officia obcaecati amet explicabo nostrum expedita quam sequi. Facilis ipsa voluptates expedita culpa, explicabo possimus nulla doloribus nobis beatae est magni voluptatibus quo quos eligendi? Adipisci deleniti suscipit reiciendis eius?</p>
+                <p>Aiutaci a gestire il sito entrando a far parte del nostro team come revisore</p>
                 <h2>Lavora come redattore</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quod deserunt repellendus beatae, at unde voluptate quaerat accusamus aliquam minima! Odio eaque fugiat natus est voluptatibus dolorem atque maiores odit.
-                Possimus atque corporis accusamus nesciunt facere reiciendis dolore, repudiandae quae unde corrupti aperiam obcaecati aliquam ducimus illum voluptate harum voluptates dicta eos voluptas nisi! Praesentium ullam officia quis dolores laudantium!
-                Officia obcaecati amet explicabo nostrum expedita quam sequi. Facilis ipsa voluptates expedita culpa, explicabo possimus nulla doloribus nobis beatae est magni voluptatibus quo quos eligendi? Adipisci deleniti suscipit reiciendis eius?</p>
+                <p>Aiutaci a gestire il sito entrando a far parte del nostro team come redattore</p>
                        
             </div>
 

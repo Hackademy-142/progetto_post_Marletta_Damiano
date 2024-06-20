@@ -42,6 +42,7 @@ class ArticleController extends Controller implements HasMiddleware
         // } else{
         //     return view('article.search-index'); 
         // }
+        
      return view('article.search-index', compact('articles', 'query'));
     }
 
