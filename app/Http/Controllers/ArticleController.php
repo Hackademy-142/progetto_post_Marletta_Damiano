@@ -74,7 +74,7 @@ class ArticleController extends Controller implements HasMiddleware
             'title'=>'required|unique:articles|min:5',
             'subtitle'=> 'required|min:5',
             'body'=> 'required|min:10',
-            'image'=>'image|required',
+            'image'=>'image',
             'category'=>'required',
             'tags' => 'required',
         ]);
@@ -83,7 +83,10 @@ class ArticleController extends Controller implements HasMiddleware
             'title'=> $request->title,
             'subtitle'=> $request->subtitle,
             'body'=> $request->body,
-            'image'=>$request->file('image')->store('public/images'),
+            //'image'=>$request->file('image')->store('public/images'),
+            'image' => $request->hasFile('image') 
+            ? $request->file('image')->store('public/images') 
+            : '',
             'category_id'=> $request->category,
             'user_id' => Auth::user()->id,
             'slug' => Str::slug($request->title),
